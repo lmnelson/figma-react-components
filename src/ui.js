@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import FigmaButton from "./components/Button/Button";
 import "./ui.css";
 class App extends React.Component {
     constructor() {
@@ -26,7 +25,6 @@ class App extends React.Component {
                 "Count: ",
                 React.createElement("input", { ref: this.countRef })),
             React.createElement("button", { id: "create", onClick: this.onCreate }, "Create"),
-            React.createElement(FigmaButton, { theme: "primary" }, "Foobar"),
             React.createElement("button", { onClick: this.onCancel }, "Cancel")));
     }
 }

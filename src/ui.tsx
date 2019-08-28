@@ -36,7 +36,6 @@ class App extends React.Component {
         <button id="create" onClick={this.onCreate}>
           Create
         </button>
-        <FigmaButton theme="primary">Foobar</FigmaButton>
         <button onClick={this.onCancel}>Cancel</button>
       </div>
     );
