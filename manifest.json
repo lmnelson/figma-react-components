@@ -1,7 +1,0 @@
-{
-  "name": "Styleguide_Creator",
-  "id": "748332178041420554",
-  "api": "1.0.0",
-  "main": "dist/code.js",
-  "ui": "dist/ui.html"
-}
