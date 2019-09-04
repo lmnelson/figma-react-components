@@ -6,16 +6,36 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "npx webpack --mode=development --watch",
-    "build": "npx webpack --mode=production"
+    "build": "npx webpack --mode=production",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280",
+    "chromatic": "CHROMATIC_APP_CODE=ccdyqo9z97 chromatic test"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@percy/storybook": "^3.2.0",
+    "@storybook/addon-a11y": "^5.1.11",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-info": "^5.1.11",
+    "@storybook/addon-knobs": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/react": "^5.1.11",
+    "@types/node": "^12.7.2",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
+    "@types/storybook__addon-knobs": "^5.0.3",
+    "@types/storybook__react": "^4.0.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "html-webpack-inline-source-plugin": "0.0.10",
     "html-webpack-plugin": "^3.2.0",
+    "react-docgen-typescript-loader": "^3.1.1",
+    "storybook-chromatic": "^2.2.2",
     "style-loader": "^1.0.0",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
@@ -24,11 +44,11 @@
     "webpack-cli": "^3.3.7"
   },
   "dependencies": {
-    "@types/node": "^12.7.2",
     "classnames": "^2.2.6",
     "csstype": "^2.6.6",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "typeface-inter": "0.0.77"
   }
 }

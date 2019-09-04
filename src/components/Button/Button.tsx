@@ -1,24 +1,43 @@
 import * as React from "react";
+import PropTypes from "prop-types";
 const classNames = require("classnames");
-const styles = require("./button.css");
+import "./button.css";
+
+const allowedButtonVariants = [
+  "primary",
+  "primaryDestructive",
+  "standard",
+  "standardDestructive"
+];
 
 interface ButtonProps {
-  children: any;
-  theme: any;
+  children?: any;
+  variant: string;
+  isDisabled: boolean;
   rest?: any;
 }
 
 const FigmaButton = (props: ButtonProps) => {
   const cssClasses = classNames({
     figma_button: true,
-    "figma_button--theme-primary": props.theme.primary,
-    "figma_button--theme-secondary": props.theme.secondary
+    "figma_button--variant-primary": props.variant === "primary",
+    "figma_button--variant-standard": props.variant === "standard",
+    "figma_button--variant-standardDestructive":
+      props.variant === "standardDestructive",
+    "figma_button--variant-primaryDestructive":
+      props.variant === "primaryDestructive"
   });
   return (
-    <FigmaButton theme={props.theme} className={cssClasses} {...props.rest}>
+    <button disabled={props.isDisabled} className={cssClasses} {...props.rest}>
       {props.children}
-    </FigmaButton>
+    </button>
   );
+};
+
+FigmaButton.propTypes = {
+  variant: PropTypes.oneOf([allowedButtonVariants]).isRequired,
+  disabled: PropTypes.bool,
+  children: PropTypes.any.isRequired
 };
 
 export default FigmaButton;

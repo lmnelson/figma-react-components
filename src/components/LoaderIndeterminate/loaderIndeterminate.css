@@ -1,0 +1,29 @@
+@keyframes spin360 {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+.figma_loader--variant-indeterminate {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+.figma_loader--variant-indeterminate > svg {
+  animation: spin360 1s infinite reverse linear;
+}
+.figma_loader--size-small > svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.figma_loader--size-medium > svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.figma_loader--size-large > svg {
+  width: 3.2rem;
+  height: 3.2rem;
+}

@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import FigmaButton from "./components/Button/Button";
 import "./ui.css";
 
 declare function require(path: string): any;
