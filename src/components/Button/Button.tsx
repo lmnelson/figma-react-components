@@ -10,12 +10,12 @@ const allowedButtonVariants = [
   "standardDestructive"
 ];
 
-interface ButtonProps {
+type ButtonProps = {
   children?: any;
   variant: string;
   isDisabled: boolean;
   rest?: any;
-}
+};
 
 const FigmaButton = (props: ButtonProps) => {
   const cssClasses = classNames({

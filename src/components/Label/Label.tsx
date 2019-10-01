@@ -4,7 +4,7 @@ const classNames = require("classnames");
 import "./label.css";
 
 interface LabelProps {
-  children: string;
+  children: any;
 }
 
 const FigmaLabel = (props: LabelProps) => {
@@ -15,7 +15,7 @@ const FigmaLabel = (props: LabelProps) => {
 };
 
 FigmaLabel.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.any.isRequired
 };
 
 export default FigmaLabel;
