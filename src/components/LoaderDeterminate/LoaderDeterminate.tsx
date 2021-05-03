@@ -16,12 +16,12 @@ interface progressIndicatorProps {
 
 const FigmaLoaderDeterminate = (props: progressIndicatorProps) => {
   const cssClasses = classNames({
-    "figma_loader--variant-determinate": true
+    "figma_loader--variant-determinate": true,
   });
   const svgSize = {
     small: 16,
     medium: 24,
-    large: 32
+    large: 32,
   };
   const total = (2 * Math.PI * svgSize[props.size]) / 2;
   return (
@@ -33,7 +33,7 @@ const FigmaLoaderDeterminate = (props: progressIndicatorProps) => {
           height: svgSize[props.size],
           border: "0.2rem solid black",
           borderRadius: "50%",
-          transform: "rotate(-90deg)"
+          transform: "rotate(-90deg)",
         }}
       >
         <circle
@@ -43,9 +43,10 @@ const FigmaLoaderDeterminate = (props: progressIndicatorProps) => {
           style={{
             fill: "transparent",
             stroke: "black",
+            // @ts-ignore
             "stroke-width": svgSize[props.size],
             "stroke-dasharray": `${(props.progress * total) / 100} ${total}`,
-            transition: "stroke-dasharray 500ms ease"
+            transition: "stroke-dasharray 500ms ease",
           }}
         />
       </svg>
@@ -55,12 +56,12 @@ const FigmaLoaderDeterminate = (props: progressIndicatorProps) => {
 
 FigmaLoaderDeterminate.propTypes = {
   size: PropTypes.oneOf([allowedIndicatorSizes]),
-  progress: PropTypes.number.isRequired
+  progress: PropTypes.number.isRequired,
 };
 
 FigmaLoaderDeterminate.defaultProps = {
   size: "small",
-  progress: 0
+  progress: 0,
 };
 
 export default FigmaLoaderDeterminate;

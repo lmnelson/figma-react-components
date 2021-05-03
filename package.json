@@ -8,8 +8,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "snapshot": "build-storybook && percy-storybook --widths=320,1280",
-    "chromatic": "CHROMATIC_APP_CODE=ccdyqo9z97 chromatic test",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files"
+    "chromatic": "CHROMATIC_APP_CODE=ccdyqo9z97 chromatic test"
   },
   "private": false,
   "babel": {
@@ -38,19 +37,20 @@
     "@types/storybook__react": "^4.0.2",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
+    "css-loader": "^3.6.0",
     "html-webpack-inline-source-plugin": "0.0.10",
     "html-webpack-plugin": "^3.2.0",
     "react-docgen-typescript-loader": "^3.1.1",
     "storybook-chromatic": "^2.2.2",
-    "style-loader": "^1.0.0",
+    "style-loader": "^1.3.0",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
-    "url-loader": "^2.1.0",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7"
+    "url-loader": "^2.3.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "babel-preset-react-app": "^10.0.0",
     "classnames": "^2.2.6",
     "csstype": "^2.6.6",
     "prop-types": "^15.7.2",
