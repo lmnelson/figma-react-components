@@ -1,0 +1,18 @@
+.figma_section-title {
+  font-family: var(--figma-font-primary);
+  color: var(--figma-color-black8);
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+.figma_section-title--size-standard {
+  font-weight: var(--figma-fontWeight-semiBold);
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+.figma_section-title--size-large {
+  font-weight: var(--figma-fontWeight-medium);
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}

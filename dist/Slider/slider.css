@@ -1,0 +1,8 @@
+.figma_slider {
+  display: flex;
+}
+.figma_slider--variant-inline {
+}
+.figma_slider--variant-stacked {
+  flex-direction: column;
+}
